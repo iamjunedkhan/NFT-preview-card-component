@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+    :root{
+      --Soft_blue: hsl(215, 51%, 70%);
+      --Cyan: hsl(178, 100%, 50%);
+      /* (main BG) */
+      --Very_dark_blue1: hsl(217, 54%, 11%);
+      /* (card BG) */
+      --Very_dark_blue2: hsl(216, 50%, 16%);
+      /* (line) */
+      --Very_dark_blue: hsl(215, 32%, 27%);
+      --White: hsl(0, 0%, 100%);
+    }
+    body{
+        background-color: var(--Very_dark_blue1);
+        font-family: 'Outfit', sans-serif;
+    }
+    .card{
+        width: 350px;
+        /* border: 2px solid white; */
+        position: absolute;
+        left: 50%;    
+        top: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 15px;
+        background-color: var(--Very_dark_blue2);
+        /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+        /* box-shadow: 10px 1  0px 8px 10px var(--Very_dark_blue); */
+    }
+    .image{
+      
+      margin: 20px;
+      overflow: hidden;
+      border-radius: 15px;
+
+    }
+    .image>img{
+      width: 100%;
+    }
+
+    h1{
+      color: white;
+      margin: 20px;
+      font-size: 26px;
+    }
+
+    p{
+      margin: 20px;
+      font-size: 18px;
+      color: var(--Soft_blue);
+    }
+    .price{
+      display: flex;
+      margin: 20px;
+      justify-content: space-between;
+      font-size: 18px;
+      color: var(--Soft_blue);
+
+    }
+
+    .price span:nth-child(1)
+    {
+      color: var(--Cyan);
+    }
+    .creator{
+      /* margin:10px 20px
+      m; */
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+    .creator img{
+      width: 100%;
+    }
+    .creator div{
+      border: 2px solid white;
+      border-radius: 200px;
+      width: 34px;
+      height: 34px;
+      /* margin-bottom: 20px; */
+    }
+    .creator p span:nth-child(2){
+      color: white;
+    }
+    .line{
+      border-top: 1px solid var(--Soft_blue);
+      /* margin-top: 10px; */
+        margin-left: 20px;
+        margin-right: 20px;
+      margin-bottom: 10px;
+      opacity: 0.4;
+    }
+</style>
+</head>
+<body>
+
+  <!-- Equilibrium #3429 -->
+
+  
+
+  <!-- 0.041 ETH -->
+  <!-- 3 days left -->
+  
+  <!-- Creation of Jules Wyvern -->
+
+  <div class="card">
+    <div class="image">
+      <img src="./images/image-equilibrium.jpg" alt="">
+    </div>
+
+    <h1 class="title">Equilibrium #3429</h1>
+
+    <p class="desc">Our Equilibrium collection promotes balance and calm.</p>
+
+    <div class="price" >
+      <span><img src="./images/icon-ethereum.svg" alt=""> 0.041 ETH</span>
+      <span><img src="./images/icon-clock.svg" alt=""> 3 days left</span>
+    </div>
+<div class="line"></div>
+    <div class="creator">
+      <div><img src="./images/image-avatar.png" alt=""></div>
+      <p><span>Creation of </span><span>Jules Wyvern</span></p>
+    </div>
+  </div>
+</body>
+</html>
